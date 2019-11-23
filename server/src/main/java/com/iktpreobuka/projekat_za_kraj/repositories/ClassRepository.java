@@ -2,11 +2,14 @@ package com.iktpreobuka.projekat_za_kraj.repositories;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import com.iktpreobuka.projekat_za_kraj.entities.ClassEntity;
 import com.iktpreobuka.projekat_za_kraj.entities.SubjectEntity;
 import com.iktpreobuka.projekat_za_kraj.enumerations.EClass;
 
+@Repository
 public interface ClassRepository extends CrudRepository<ClassEntity, Integer> {
 
 	public ClassEntity getById(Integer id);
@@ -16,7 +19,7 @@ public interface ClassRepository extends CrudRepository<ClassEntity, Integer> {
 	public ClassEntity findByIdAndStatusLike(Integer id, Integer status);
 	
 	@Query("select s.subject from ClassEntity c join c.subjects s where s.clas=:clas and s.status=1")
-	public Iterable<SubjectEntity> findSubjectsByClass(ClassEntity clas);
+	public Iterable<SubjectEntity> findSubjectsByClass(@Param("clas") ClassEntity clas);
 
 	public ClassEntity getByClassLabel(EClass classLabel);
 

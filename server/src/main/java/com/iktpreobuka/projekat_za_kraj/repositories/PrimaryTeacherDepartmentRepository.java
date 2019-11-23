@@ -3,9 +3,11 @@ package com.iktpreobuka.projekat_za_kraj.repositories;
 import java.util.Optional;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import com.iktpreobuka.projekat_za_kraj.entities.PrimaryTeacherDepartmentEntity;
 
+@Repository
 public interface PrimaryTeacherDepartmentRepository extends CrudRepository<PrimaryTeacherDepartmentEntity, Integer> {
 
 	public Optional<PrimaryTeacherDepartmentEntity> findById(Integer id);

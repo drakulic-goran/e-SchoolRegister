@@ -7,6 +7,8 @@ import javax.validation.Valid;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.iktpreobuka.projekat_za_kraj.entities.TeacherEntity;
@@ -15,6 +17,7 @@ import com.iktpreobuka.projekat_za_kraj.entities.dto.SearchTeachersDto;
 import com.iktpreobuka.projekat_za_kraj.entities.dto.TeacherDto;
 import com.iktpreobuka.projekat_za_kraj.enumerations.EUserRole;
 
+@Repository
 public interface TeacherRepository extends CrudRepository<TeacherEntity, Integer> {
 
 	public TeacherEntity getById(Integer id);
@@ -46,10 +49,10 @@ public interface TeacherRepository extends CrudRepository<TeacherEntity, Integer
 	@Transactional
     @Modifying
     @Query (value ="INSERT INTO teacher (user_id, certificate, employment_date, status, created_by) VALUES (:user, :certificate, :employment, 1, :logged)", nativeQuery = true)
-	public void addAdminFromExistUser(String certificate, String employment, Integer user, Integer logged);
+	public void addAdminFromExistUser(@Param("certificate") String certificate, @Param("employment") String employment, @Param("user") Integer user, @Param("logged") Integer logged);
 	public TeacherEntity getByIdAndStatusLike(Integer userId, Integer status);
 	
 	@Query("select new com.iktpreobuka.projekat_za_kraj.entities.dto.SearchTeachersDto(u, ua) from TeacherEntity u join u.accounts ua where ua.accessRole=:role and u.status=:status and ua.status=1")
-	public Iterable<SearchTeachersDto> findByStatusWithUserAccount(Integer status, EUserRole role);
+	public Iterable<SearchTeachersDto> findByStatusWithUserAccount(@Param("status") Integer status, @Param("role") EUserRole role);
 
 }

@@ -7,6 +7,8 @@ import javax.validation.Valid;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.iktpreobuka.projekat_za_kraj.entities.ParentEntity;
@@ -15,6 +17,7 @@ import com.iktpreobuka.projekat_za_kraj.entities.dto.ParentDto;
 import com.iktpreobuka.projekat_za_kraj.entities.dto.SearchParentsDto;
 import com.iktpreobuka.projekat_za_kraj.enumerations.EUserRole;
 
+@Repository
 public interface ParentRepository extends CrudRepository<ParentEntity, Integer> {
 
 	public Optional<ParentEntity> findById(Integer id);
@@ -47,9 +50,9 @@ public interface ParentRepository extends CrudRepository<ParentEntity, Integer> 
 	@Transactional
     @Modifying
     @Query (value ="INSERT INTO parent (user_id, e_mail, status, created_by) VALUES (:user, :email, 1, :logged)", nativeQuery = true)
-	public void addAdminFromExistUser(String email, Integer user, Integer logged);
+	public void addAdminFromExistUser(@Param("email") String email, @Param("user") Integer user, @Param("logged") Integer logged);
 	
 	@Query("select new com.iktpreobuka.projekat_za_kraj.entities.dto.SearchParentsDto(u, ua) from ParentEntity u join u.accounts ua where ua.accessRole=:role and u.status=:status and ua.status=1")
-	public Iterable<SearchParentsDto> findByStatusWithUserAccount(Integer status, EUserRole role);
+	public Iterable<SearchParentsDto> findByStatusWithUserAccount(@Param("status") Integer status, @Param("role") EUserRole role);
 
 }
