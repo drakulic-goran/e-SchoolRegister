@@ -1,0 +1,148 @@
+:root {
+  --space: 1.5em 0;
+  --space: 2em 0;
+}
+
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  /*background-color: #282c34;
+  min-height: 100vh;*/
+  display: flex;
+  /*display: block;*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-color: steelblue;
+  height: 100px;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin-bottom: auto;
+  margin-top: auto;
+  padding-bottom: 3vh;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  padding-top: 3vh;
+  border-bottom: 1px solid rgb(216, 214, 214);
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Site-content {
+  /*flex: 1;*/
+  flex: 1 0 auto;
+  padding: var(--space) var(--space) 0;
+  width: 100%;
+}
+
+.Site-content:after {
+  content: '\00a0';
+  display: block;
+  margin-top: var(--space);
+  height: 0;
+  visibility: hidden;
+}
+
+.App-footer {
+  width: 100%;
+  margin: 0;
+  /*padding: 0;*/
+  padding: 20px;
+  border: 0;
+  outline: 0;
+  font-size: calc(10px + 1vmin);
+  /*font-size: 100%;
+  vertical-align: baseline;*/
+  display: block;
+  text-align: center;
+  /*padding-top: 20px;*/
+  padding-bottom: 10px;
+  background-color: steelblue;
+  color: white;
+  margin-top: auto;
+  padding-top: 3vh;
+  border-top: 1px solid rgb(216, 214, 214);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.phantom-footer {
+  display: block;
+  padding: 0px;
+  height: 0px;
+  width: 100%;
+  padding-bottom: 10px;
+  margin-top: auto;
+  padding-top: 3vh;
+  left: 0;
+  bottom: 0;
+}
+
+.phantom-header {
+  display: block;
+  padding: 0px;
+  height: 60px;
+  width: 100%;
+  padding-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 3vh;
+  left: 0;
+  top: 0;
+}
+
+.logout-btn {
+  padding: 2px 30px;
+  /* background-color: #417cef; */
+  border: 0;
+  font-size: calc(10px + 1vmin);
+  color: white;
+  border-radius: 3px;
+  font-family: Oxygen, sans-serif;
+  background-color: rgba(15, 15, 15, 0.03);
+  margin-top: 20px;
+  border: 2px solid #ffffff;
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
+}
+
+.logout-btn:hover,
+.logout-btn:focus {
+  background-color: #bcbec2;
+  color: steelblue;
+}

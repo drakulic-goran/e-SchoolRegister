@@ -1,0 +1,112 @@
+.teacher-grades-school-year {
+	margin: 50px auto 0px;
+	color: #3B5998;
+	text-align: center;
+	border: 3px solid #3B5998;
+	border-radius: 20px 20px 20px 20px;
+	padding: 10px;
+	max-width: 81em;
+	min-width: 20em;
+}
+
+.teacher-grades-semester {
+	margin: 10px auto 0px;
+	color: white;
+	background: #3B5998;
+	text-align: center;
+	border: 1px solid #B0C4DE;
+	border-bottom: none;
+	border-radius: 20px 20px 20px 20px;
+	padding: 5px;
+	max-width: 81em;
+	min-width: 19em;
+}
+
+.teacher-grades-class-department {
+	max-width: 81em;
+	min-width: 18em;
+	margin: 10px 0px 0px 0px;
+	padding: 10px;
+	color: #3B5998; 
+	background-color: rgb(206, 221, 250);
+	text-align: center;
+    border-radius: 15px; 
+}
+
+.teacher-grades-subject {
+	max-width: 81em;
+	min-width: 17em;
+	/*width: 40%;*/
+	/*margin: 0px auto;*/
+	margin: 5px 0px 0px 0px;
+	padding: 10px;
+	border: 3px solid #B0C4DE;
+	background: white;
+	border-radius: 15px; 
+    color: #3B5998; 
+}
+
+.teacher-grades-student {
+	width: 98%; 
+	margin: 0px auto; 
+	padding: 10px; 
+	border: 1px solid #3B5998;
+	color: rgb(46, 69, 117); 
+	background: rgb(178, 210, 211); 
+	border-radius: 10px; 
+	text-align: left;
+	margin-bottom: 3px;
+	margin-top: 5px;
+	font-size: 22px;
+}
+
+.teacher-grades-grades {
+	display: inline-block; 
+	margin: 5px;
+	background-color: white;
+	text-align: center;
+	padding: 5px; 
+	border-radius: 21px; 
+	color: #3B5998;
+	min-width: 1.6em;
+}
+
+.teacher-subjects-header {
+	max-width: 81em;
+	min-width: 20em;
+	margin: 20px auto 0px;
+	padding: 20px;
+	color: #3B5998; 
+	background-color: rgb(206, 221, 250);
+	text-align: center;
+	border-radius: 15px; 
+}
+
+.teacher-subjects-subjects {
+	max-width: 81em;
+	min-width: 18em;
+	margin: 20px 0px 0px 0px;
+	padding: 10px;
+	color: white; 
+	background-color: #3B5998;
+	text-align: center;
+	border-radius: 15px; 
+}
+
+.teacher-subjects-classes {
+	display: inline-block; 
+	margin: 5px;
+	background-color: white;
+	text-align: center;
+	padding: 5px; 
+	border-radius: 21px; 
+	color: #3B5998;
+	min-width: 2.8em;
+
+}
+.teacher-subjects-classes:after {
+	content: "";
+	display: block;
+	clear: both;
+	background-color: white;
+}

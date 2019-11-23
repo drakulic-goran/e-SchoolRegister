@@ -1,0 +1,120 @@
+.administration-header {
+	margin: 10px auto 0px;
+	color: white;
+	background: #3B5998;
+	text-align: center;
+	border: 1px solid #B0C4DE;
+	border-bottom: none;
+	border-radius: 20px 20px 20px 20px;
+	padding: 5px;
+	max-width: 81em;
+	min-width: 20em;
+}
+
+.administration-assign {
+	width: 96%; 
+	margin: 0px auto; 
+	padding: 10px; 
+	border: 1px solid #3B5998;
+	color: rgb(46, 69, 117); 
+	background: rgb(178, 210, 211); 
+	border-radius: 10px; 
+	text-align: left;
+	margin-bottom: 5px;
+	margin-top: 15px;
+	font-size: 25px;
+}
+
+.user-info {
+	display: inline-block; 
+	margin: 5px;
+	background-color: white;
+	text-align: center;
+	padding: 10px; 
+	border-radius: 21px; 
+	color: #3B5998;
+	min-width: 1.6em;
+}
+
+.edit_delete_btn {
+	height: 37px;
+	width: 50%;
+	margin: 5px 20%;
+	color: white;
+	padding: 1px;
+	background: #3B5998;
+	border-radius: 5px;
+	border: 3px solid white;
+	font-size: 1.2em;
+	font-family: 'Lora', serif;
+    max-width: 9em;
+	cursor: pointer;
+}
+
+.edit_delete_btn:hover {
+	background: rgb(183, 203, 247);
+	color: #3B5998;
+}
+
+#edit_delete_btn {
+	height: 37px;
+	width: 45%;
+	margin: 15px 2%;
+	color: white;
+	padding: 1px;
+	background: #3B5998;
+	border-radius: 5px;
+	border: 3px solid white;
+	font-size: 1.2em;
+	font-family: 'Lora', serif;
+    max-width: 9em;
+	cursor: pointer;
+}
+
+#edit_delete_btn:hover {
+	background: rgb(183, 203, 247);
+	color: #3B5998;
+}
+
+#add_btn {
+	height: 35px;
+	/*width: 80%;
+	margin: 35px 10%;*/
+	width: 45%;
+	margin: 35px 2%;
+	color: white;
+	background: #3B5998;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.3em;
+	font-family: 'Lora', serif;
+    max-width: 9em;
+    min-width: 6em;
+	cursor: pointer;
+}  
+
+#add_btn:hover {
+	background: rgb(183, 203, 247);
+	color: #3B5998;
+}
+
+#change_btn {
+	height: 41px;
+	width: 25%;
+	margin: 15px 2%;
+	min-width: 7em;
+	color: white;
+	padding: 1px;
+	background: #3B5998;
+	border-radius: 5px;
+	border: 3px solid white;
+	font-size: 0.9em;
+	font-family: 'Lora', serif;
+	max-width: 9em;
+	cursor: pointer;
+}
+
+#change_btn:hover {
+	background: rgb(183, 203, 247);
+	color: #3B5998;
+}

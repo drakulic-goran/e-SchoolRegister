@@ -1,0 +1,150 @@
+body {
+  background: #A9D9C3;
+  font-family: 'Lora', serif;
+}
+#text-box{ 
+  z-index:1; 
+}
+#register_form h1 {
+  text-align: center;
+}
+#register_form {
+  width: 37%;
+  margin: 20px auto;
+  padding-bottom: 30px;
+  border: 2px solid #3B5998;
+  border-radius: 5px;
+  background: white;
+  min-width: 20em;
+  font-family: 'Lora', serif;
+}
+#register_form input {
+  width: 80%;
+  height: 35px;
+  margin: 5px 10%;
+  font-size: 1.1em;
+  padding: 4px;
+  font-size: .9em;
+  font-family: 'Lora', serif;
+}
+#register_form select {
+  width: 80%;
+  height: 35px;
+  margin: 5px 10%;
+  font-size: 1.1em;
+  padding: 4px;
+  font-size: .9em;
+  font-family: 'Lora', serif;
+}
+#department_form h1 {
+  text-align: center;
+}
+#department_form {
+  width: 37%;
+  margin: 20px auto;
+  padding-bottom: 30px;
+  border: 2px solid #3B5998;
+  border-radius: 5px;
+  background: white;
+  min-width: 20em;
+  font-family: 'Lora', serif;
+}
+#department_form input {
+  width: 80%;
+  height: 35px;
+  margin: 5px 10%;
+  font-size: 1.1em;
+  padding: 4px;
+  font-size: .9em;
+  font-family: 'Lora', serif;
+}
+#department_form select {
+  width: 80%;
+  height: 35px;
+  margin: 5px 10%;
+  font-size: 1.1em;
+  padding: 4px;
+  font-size: .9em;
+  font-family: 'Lora', serif;
+}
+#reg_btn {
+  height: 35px;
+  /*width: 80%;
+  margin: 35px 10%;*/
+  width: 45%;
+  margin: 35px 2%;
+  color: white;
+  background: #3B5998;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.3em;
+  font-family: 'Lora', serif;
+  max-width: 9em;
+  cursor: pointer;
+}
+#reg_btn:hover {
+	background: rgb(183, 203, 247);
+	color: #3B5998;
+}
+
+#cncl_btn {
+  height: 35px;
+  /*width: 80%;
+  margin: 35px 10%;*/
+  width: 45%;
+  margin: 35px 2%;
+  color: white;
+  background: #3B5998;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.3em;
+  font-family: 'Lora', serif;
+  max-width: 9em;
+  cursor: pointer;
+}
+#cncl_btn:hover {
+	background: rgb(183, 203, 247);
+	color: #3B5998;
+}
+
+#gender, #gender input {
+  height: 20px;
+  width: 10%;
+  margin: 35px 1%;
+  border-radius: 5px;
+  max-width: 9em;
+  cursor: pointer;
+}
+
+
+/*Styling for errors on form*/
+.form_error span {
+  width: 80%;
+  height: 35px;
+  margin: 3px 10%;
+  font-size: 1.1em;
+  color: #D83D5A;
+  font-family: 'Candal', serif;
+}
+.form_error input {
+  border: 1px solid #D83D5A;
+}
+
+/*Styling in case no errors on form*/
+.form_success span {
+  width: 80%;
+  height: 35px;
+  margin: 3px 10%;
+  font-size: 1.1em;
+  color: green;
+  font-family: 'Candal', serif;
+}
+.form_success input {
+  border: 1px solid green;
+}
+#error_msg {
+  color: red;
+  text-align: center;
+  margin: 10px auto;
+  font-family: 'Candal', serif;
+}
